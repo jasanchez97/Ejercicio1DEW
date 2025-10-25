@@ -86,8 +86,8 @@ API Handling: Fetch API
 
 State Management: useState, useEffect
 
-![alt text](image-1.png) Main page
-![alt text](image-2.png) Categories
-![alt text](image-3.png) About us
-![alt text](image-4.png) Example dish
-![alt text](image-5.png) Example dish 2
+Main page ![alt text](image-1.png)
+Categories ![alt text](image-2.png)
+About us ![alt text](image-3.png)
+Example dish ![alt text](image-4.png)
+Example dish 2 ![alt text](image-5.png)
