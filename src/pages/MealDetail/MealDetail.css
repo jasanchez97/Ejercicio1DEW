@@ -1,0 +1,163 @@
+.meal-detail-container {
+  padding-top: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #e44d26;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e44d26;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #e44d26;
+  color: white;
+}
+
+.meal-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.meal-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.meal-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.meal-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.meal-category,
+.meal-area,
+.meal-tags {
+  margin-bottom: 0.75rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.meal-price {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #e44d26;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  color: #e44d26;
+  font-weight: bold;
+}
+
+.meal-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.ingredients-section,
+.instructions-section,
+.video-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e44d26;
+  padding-bottom: 0.5rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.ingredients-list li {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #e44d26;
+}
+
+.ingredient-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.ingredient-measure {
+  color: #666;
+  font-style: italic;
+}
+
+.instructions {
+  line-height: 1.8;
+}
+
+.instruction-step {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #e44d26;
+}
+
+.video-link {
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.video-link:hover {
+  background: #cc0000;
+}
+
+@media (max-width: 768px) {
+  .meal-detail-container {
+    padding-top: 1rem;
+  }
+  
+  .meal-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .meal-title {
+    font-size: 2rem;
+  }
+  
+  .ingredients-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .meal-detail {
+    padding: 0 0.5rem;
+  }
+}
