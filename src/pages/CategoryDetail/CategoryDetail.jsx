@@ -11,7 +11,6 @@ function CategoryDetail() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  // Función para precios persistentes (misma que Home.jsx)
   const getOrSetPrice = (mealId) => {
     const savedPrices = localStorage.getItem('mealPrices')
     const prices = savedPrices ? JSON.parse(savedPrices) : {}
@@ -29,7 +28,6 @@ function CategoryDetail() {
 
   const fetchCategoryMeals = async () => {
     try {
-      // Primero obtener los platos de la categoría
       const mealsResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`)
       
       if (!mealsResponse.ok) {
@@ -42,15 +40,13 @@ function CategoryDetail() {
         throw new Error('No se encontraron platos en esta categoría')
       }
 
-      // Luego obtener información detallada de la categoría
       const categoriesResponse = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
       const categoriesData = await categoriesResponse.json()
       
       const categoryInfo = categoriesData.categories?.find(
         cat => cat.strCategory === categoryName
       )
-
-      // Asignar precios persistentes a cada plato
+      
       const mealsWithPrices = mealsData.meals.map(meal => ({
         ...meal,
         price: getOrSetPrice(meal.idMeal)

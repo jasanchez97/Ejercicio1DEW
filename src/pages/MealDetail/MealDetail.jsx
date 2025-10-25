@@ -9,7 +9,6 @@ function MealDetail() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  // MISMA función que en Home.jsx para obtener precios
   const getPrice = (mealId) => {
     const savedPrices = localStorage.getItem('mealPrices')
     const prices = savedPrices ? JSON.parse(savedPrices) : {}
@@ -31,7 +30,6 @@ function MealDetail() {
       }
       
       const mealData = data.meals[0]
-      // Usar el precio persistente (misma lógica que Home.jsx)
       const persistentPrice = getPrice(mealData.idMeal)
       
       setMeal({
@@ -81,7 +79,6 @@ function MealDetail() {
     )
   }
 
-  // Extraer ingredientes y medidas
   const ingredients = []
   for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`] && meal[`strIngredient${i}`].trim() !== '') {

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 export const usePersistentPrices = () => {
   const [prices, setPrices] = useState({})
 
-  // Cargar precios desde localStorage al inicializar
   useEffect(() => {
     const savedPrices = localStorage.getItem('mealPrices')
     if (savedPrices) {
@@ -11,7 +10,6 @@ export const usePersistentPrices = () => {
     }
   }, [])
 
-  // Guardar precios en localStorage cuando cambien
   useEffect(() => {
     if (Object.keys(prices).length > 0) {
       localStorage.setItem('mealPrices', JSON.stringify(prices))
@@ -23,12 +21,10 @@ export const usePersistentPrices = () => {
   }
 
   const generatePrice = (mealId) => {
-    // Si ya existe un precio, devolverlo
     if (prices[mealId]) {
       return prices[mealId]
     }
 
-    // Generar nuevo precio y guardarlo
     const newPrice = Math.floor(Math.random() * 20) + 5
     setPrices(prev => ({
       ...prev,

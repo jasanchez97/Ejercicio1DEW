@@ -1,16 +1,93 @@
-# React + Vite
+🍽️ React Restaurant – Menu and Order Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📖 Overview
 
-Currently, two official plugins are available:
+This web application developed with React allows managing a restaurant’s menu — displaying available dishes. You can add, update and delete new dishes in the project with the next structure shown below.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    src/
+    │
+    ├── components/
+    │   ├── ContentLoading/
+    │   │   ├── ContentLoading.css
+    │   │   └── ContentLoading.jsx
+    │   │
+    │   ├── Loading/
+    │   │   ├── Loading.css
+    │   │   └── Loading.jsx
+    │   │
+    │   ├── MenuItem/
+    │   │   ├── MenuItem.css
+    │   │   └── MenuItem.jsx
+    │   │
+    │   ├── MenuList/
+    │   │   ├── MenuList.css
+    │   │   └── MenuList.jsx
+    │   │
+    │   ├── NavBar/
+    │   │   ├── NavBar.css
+    │   │   └── NavBar.jsx
+    │
+    ├── context/
+    │   └── PriceContext.jsx
+    │
+    ├── hooks/
+    │   ├── useLoading.jsx
+    │   └── usePersistentPrices.jsx
+    │
+    ├── pages/
+    │   ├── Categories/
+    │   │   ├── Categories.css
+    │   │   └── Categories.jsx
+    │   │
+    │   ├── CategoryDetail/
+    │   │   ├── CategoryDetail.css
+    │   │   └── CategoryDetail.jsx
+    │   │
+    │   ├── MealDetail/
+    │   │   ├── MealDetail.css
+    │   │   └── MealDetail.jsx
+    │   │
+    │   ├── About.jsx
+    │   └── Home.jsx
+    │
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    │
+    ├── .gitignore
+    └── eslint.config.js
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The main focus of the project is the interaction with an external API using fetch and async/await functions, ensuring efficient asynchronous operations and a smooth user experience.
 
-## Expanding the ESLint configuration
+🚀 Main Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Dynamic visualization of the restaurant’s menu.
+
+Consumption of a RESTful API to retrieve, create, update, and delete dishes.
+
+Implementation of asynchronous functions with async/await.
+
+Modern and responsive user interface built with React.
+
+Reusable components for clean and maintainable code.
+
+
+🧩 Technologies Used
+
+Frontend: React 18, React Router
+
+Language: JavaScript (ES6+)
+
+Styling: CSS
+
+API Handling: Fetch API
+
+State Management: useState, useEffect
+
+![alt text](image-1.png) Main page
+![alt text](image-2.png) Categories
+![alt text](image-3.png) About us
+![alt text](image-4.png) Example dish
+![alt text](image-5.png) Example dish 2
